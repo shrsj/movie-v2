@@ -73,7 +73,7 @@
     <!--LOGIN SCREEN-->
 
     
-    <div id="loginScreen" > 
+    <div id="loginScreen" style="background:white" > 
         <h3> LOGIN </h3>
         <a href="#" class="cancel">&times;</a> 
         <div class = 's1' style ="float:center">
