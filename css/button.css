@@ -1,0 +1,84 @@
+.frmSearch {
+        border: 1px solid #F0F0F0;background-color:#C8EEFD;margin: 2px 0px;padding:30px;
+    }
+    #country-list{
+        float:left;list-style:none;margin:0;padding:0;width:390px;
+    }
+    #country-list li{
+        padding: 10px; background:#FAFAFA;border-bottom:#F0F0F0 1px solid;
+    }
+    #country-list li:hover{
+        background:#F0F0F0;
+    }
+    #search-box{
+        padding: 10px;border: #F0F0F0 1px solid; width: 50%;
+    }
+
+.btn {
+  background: #35abdb;
+  background-image: -webkit-linear-gradient(top, #35abdb, #35abdb);
+  background-image: -moz-linear-gradient(top, #35abdb, #35abdb);
+  background-image: -ms-linear-gradient(top, #35abdb, #35abdb);
+  background-image: -o-linear-gradient(top, #35abdb, #35abdb);
+  background-image: linear-gradient(to bottom, #35abdb, #35abdb);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 3px #666666;
+  -moz-box-shadow: 0px 5px 3px #666666;
+  box-shadow: 0px 5px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 26px;
+  padding: 5px 10px 5px 10px;
+  border: solid #d6e6f0 1px;
+  text-decoration: none;
+  margin : 2px;
+  width:110px;
+  height:30px;
+
+
+}
+
+.btn:hover {
+  background: #2db34a;
+  background-image: -webkit-linear-gradient(top, #2db34a, #2db34a);
+  background-image: -moz-linear-gradient(top, #2db34a, #2db34a);
+  background-image: -ms-linear-gradient(top, #2db34a, #2db34a);
+  background-image: -o-linear-gradient(top, #2db34a, #2db34a);
+  background-image: linear-gradient(to bottom, #2db34a, #2db34a);
+  text-decoration: none;
+ margin : 1px;
+}
+    #cover{ 
+            position:fixed; top:0; left:0; background:rgba(0,0,0,0.6); z-index:5; width:100%; height:100%; display:none; 
+    } 
+    #loginScreen { 
+            height:200px; 
+            width:340px; 
+            margin:0px auto; 
+            position:relative; 
+            z-index:10; 
+            display:none; 
+            background: url(login.png) no-repeat; 
+            border:5px solid #cccccc; 
+            border-radius:10px; 
+    } 
+    #loginScreen:target, 
+    #loginScreen:target + #cover{ 
+      display:block; 
+      opacity:2; 
+    } 
+    .cancel { 
+            display:block; 
+            position:absolute; 
+            top:3px; right:2px;
+            background:rgb(245,245,245); 
+            color:black; 
+            height:30px; 
+            width:35px; 
+            font-size:30px; 
+            text-decoration:none; 
+            text-align:center; 
+            font-weight:bold; 
+    } 

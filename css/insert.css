@@ -1,0 +1,96 @@
+#header {
+
+    background:#2BAF8F;
+    font-family: algerian;
+    color:white;
+    text-align:center;
+    padding:5px;
+    box-shadow: 0 0 5px black;
+    padding: 1%;
+    border: 1px solid white;
+    text-decoration: none;
+}
+
+
+.s1{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 500px;
+	margin: 10px auto;
+	padding: 16px;
+	background: #F7F7F7;
+	float: left;
+}
+.s1 h1{
+	background: #43D1AF;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.s1 input[type="text"],
+.s1 input[type="date"],
+.s1 input[type="datetime"],
+.s1 input[type="email"],
+.s1 input[type="number"],
+.s1 input[type="search"],
+.s1 input[type="time"],
+.s1 input[type="url"],
+.s1 textarea,
+.s1 select 
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.s1 input[type="text"]:focus,
+.s1 input[type="date"]:focus,
+.s1 input[type="datetime"]:focus,
+.s1 input[type="email"]:focus,
+.s1 input[type="number"]:focus,
+.s1 input[type="search"]:focus,
+.s1 input[type="time"]:focus,
+.s1 input[type="url"]:focus,
+.s1 textarea:focus,
+.s1 select:focus
+{
+	box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+.s1 input[type="submit"],
+.s1 input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #43D1AF;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+}
+.s1 input[type="submit"]:hover,
+.s1 input[type="button"]:hover{
+	background: #2EBC99;
+}
+
+.form {
+	width : 600px;
+}
