@@ -174,29 +174,32 @@ if (empty($_POST["fname"])) {
             $zipcode    = $_POST["zipcode"];
             $yob    = $_POST["yob"];
 
+            if($nameErr =="" && $emailErr =="" && $genderErr =="" && $websiteErr =="" & $name =="" && $email =="" && $gender =="" && $comment =="" && $website = "")
+            {
 
-            try {
-                $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                  $sql = "INSERT INTO userlogin ( fname, lname, gender, birthyear, country, zipcode, email, pass)
-                          VALUES ('$fname' ,'$lname', '$gender','$yob','$country','$zipcode','$email','$pass' )";
-               // use exec() because no results are returned
-                $conn->exec($sql);
-                echo "Record updated successfully";
-                }
-            catch(PDOException $e)
-                {
-                echo $sql . "<br>" . $e->getMessage();
-                }
 
-            $conn = null;
+                try {
+                        $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                          $sql = "INSERT INTO userlogin ( fname, lname, gender, birthyear, country, zipcode, email, pass)
+                                  VALUES ('$fname' ,'$lname', '$gender','$yob','$country','$zipcode','$email','$pass' )";
+                       // use exec() because no results are returned
+                        $conn->exec($sql);
+                        echo "Record updated successfully";
+                        }
+                    catch(PDOException $e)
+                        {
+                        echo $sql . "<br>" . $e->getMessage();
+                        }
 
-    // *** They passed the test! ***
-    // *** This is where you would post a comment to your database, etc ***
-    echo "Asta La vista!!! Record is Updated. <br><br>";
-       
+                    $conn = null;
 
-} else {
+            // *** They passed the test! ***
+            // *** This is where you would post a comment to your database, etc ***
+            echo "Asta La vista!!! Record is Updated. <br><br>";   
+
+        } 
+    }else {
     // *** The input text did not match the stored text, so they failed ***
     // *** You would probably not want to include the correct answer, but
     //  unless someone is trying on purpose to circumvent you specifically,

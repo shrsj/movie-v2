@@ -43,7 +43,8 @@ if ($_POST["captcha_input"] == $_SESSION["pass"])
 			              VALUES ('$moviename', '$genre', '$year', '$rating', '$actors','$directors','$length','$thumbs', '$imdb')";
 			   // use exec() because no results are returned
 			    $conn->exec($sql);
-			    echo "Record updated successfully";
+			   header("Location: http://movies.sj/V2.0/logd.php");
+				exit;
 			    }
 			catch(PDOException $e)
 			    {
@@ -54,7 +55,7 @@ if ($_POST["captcha_input"] == $_SESSION["pass"])
 
 	// *** They passed the test! ***
 	// *** This is where you would post a comment to your database, etc ***
-	header("Location http://movies.sj/V2.0/logd.php");
+	
        
 
 } else {

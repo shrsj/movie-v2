@@ -21,7 +21,15 @@
 				  </select>
     
     <br>
-    <input type = 'number' name='year' id='year' autofocus placeholder = 'Year'>
+    Year of Release : <select name="yob" id='yob' >
+    <?php $val =1920;
+        while($val<2016)
+        {
+            echo "<option value=".$val.">".$val."</option>";
+            $val = $val+1;
+        }
+    ?>
+    </select>
     <br>
 
     Rating 		: <select name="rating" id='rating' >

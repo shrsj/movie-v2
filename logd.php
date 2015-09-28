@@ -96,18 +96,18 @@
                         <input type ='hidden' name = 'movid'  value='<?php echo mysql_result($result, $i, "movie_id"); ?>'>
                         <input type ='submit' value = 'delete' name = 'delete'></form>
 
-                        <a href='http://www.imdb.com/title/".$row['imdbcode']."'><em> Read</em></a>
+                        <a href='http://www.imdb.com/title/<?php echo mysql_result($result, $i, 'imdbcode'); ?>'><em> Read</em></a>
 
-                        <form name = 'update' id='update' method= 'GET' action = './update.php'
-                        <input type = 'hidden' name ='movid' value ='<?php echo mysql_result($result, $i, "movie_id"); ?>'>
+                        <form name = 'update' id='update' method= 'GET' action = './update.php'>
+                        <input type = 'hidden' name ='movid' value =<?php echo mysql_result($result, $i, "movie_id");?>>
                         <input type ='submit' value='update'> </form>
                     </div>
             <?php }?>
             <div class="row">
             	<br> 
 				    <div class = 'round-button'>
-				            <a href="/insert.html">
-				                <img src="/plus-sign8.svg" alt="Home" />
+				            <a href="./insert.php">
+				                <img src="./plus-sign8.svg" alt="Home" />
 				            </a>
 				        </div>
 			</div>
@@ -144,19 +144,17 @@
                             // set the PDO error mode to exception
                             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);                
                             $sql = "DELETE FROM movies WHERE movie_id = '$movid' ";
-                            // use exec() because no results are returned
+                            
                              $conn->exec($sql);
-                             $host  = $_SERVER['HTTP_HOST'];
-                            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-                            $extra = 'mypage.php';
-                            header("Location: http://$host$uri/");                        
+                            header("Location: http://movies.sj/V2.0/logd.php");         
+                            exit;               
                         }
                         /* No rows matched -- do something else */
-                catch(PDOException $e)
-                {
-                    echo $sql . "<br>" . $e->getMessage();
+                    catch(PDOException $e){
+                        echo $sql . "<br>" . $e->getMessage();
+                    }
                 }
-            }
-    $conn = null;
-?>
-	</html>
+            $conn = null;
+        ?>
+    </body>
+</html>

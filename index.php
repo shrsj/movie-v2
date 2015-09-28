@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/button.css" type="text/css">
 
 
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
     
 
@@ -78,7 +79,7 @@
         <div class = 's1' style ="float:center">
             <form method="POST" action="logged.php" name='signin'>
                 <input type= 'text' name='email' id='email' placeholder='EMAIL' style="width:100%; height:50%;">
-                <input type= 'text' name='pass' id='pass' placeholder='Password'>
+                <input type= 'password' name='pass' id='pass' placeholder='Password'>
                 <input type='SUBMIT' value='signin'>
             </form>
         </div>

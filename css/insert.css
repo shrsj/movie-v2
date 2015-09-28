@@ -30,6 +30,7 @@
 	margin: -16px -16px 16px -16px;
 }
 .s1 input[type="text"],
+.s1 input[type="password"]
 .s1 input[type="date"],
 .s1 input[type="datetime"],
 .s1 input[type="email"],
@@ -58,6 +59,8 @@
 }
 .s1 input[type="text"]:focus,
 .s1 input[type="date"]:focus,
+.s1 input[type="password"]:focus;
+
 .s1 input[type="datetime"]:focus,
 .s1 input[type="email"]:focus,
 .s1 input[type="number"]:focus,
